@@ -30,7 +30,7 @@ course_config = CourseConfig(course_code = "dewd",
                              install_max_time = "10 min",
                              remote_files = remote_files,
                             #  supported_dbrs = ["11.3.x-scala2.12", "11.3.x-photon-scala2.12", "11.3.x-cpu-ml-scala2.12"],
-                             supported_dbrs = ["13.3.x-scala2.12", "13.3.x-photon-scala2.12", "13.3.x-cpu-ml-scala2.12"],
+                             supported_dbrs = ["15.4.x-scala2.12", "25.4.x-photon-scala2.12", "15.4.x-cpu-ml-scala2.12"],
                              expected_dbrs = "{{supported_dbrs}}")
 
 # Defined here for the majority of lessons, 
