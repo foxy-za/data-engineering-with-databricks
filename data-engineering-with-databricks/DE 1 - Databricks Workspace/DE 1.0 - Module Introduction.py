@@ -9,7 +9,7 @@
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ## Introduction to the Databricks Workspace for Data Engineers
+# MAGIC ## Introduction to the Databricks Workspace for Data Engineers.
 # MAGIC This module is part of the Data Engineer Learning Path by Databricks Academy. <br>
 # MAGIC
 # MAGIC #### Lessons
