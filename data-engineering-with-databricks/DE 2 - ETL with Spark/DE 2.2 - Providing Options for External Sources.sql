@@ -106,6 +106,10 @@ LOCATION "${DA.paths.sales_csv}"
 
 -- COMMAND ----------
 
+drop table sales_csv
+
+-- COMMAND ----------
+
 -- MAGIC %md
 -- MAGIC
 -- MAGIC **NOTE:** To create a table against an external source in PySpark, you can wrap this SQL code with the **`spark.sql()`** function.

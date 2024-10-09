@@ -151,7 +151,7 @@ CREATE OR REPLACE TEMP VIEW exploded_events AS
 SELECT *, explode(items) AS item
 FROM parsed_events;
 
-SELECT * FROM exploded_events WHERE size(items) > 2
+SELECT * FROM exploded_events WHERE size(items) > 1
 
 -- COMMAND ----------
 

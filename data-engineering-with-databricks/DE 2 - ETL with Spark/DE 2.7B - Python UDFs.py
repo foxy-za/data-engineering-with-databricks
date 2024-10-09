@@ -90,6 +90,29 @@ display(sales_df.select(first_letter_udf(col("email"))))
 # COMMAND ----------
 
 # MAGIC %md
+# MAGIC ###Register UDF to use in SQL
+# MAGIC Register the UDF using ```spark.udf.register``` to also make it available for us in the SQL namespace
+
+# COMMAND ----------
+
+sales_df.createOrReplaceGlobalTempView("sales")
+
+first_letter_udf = spark.udf.register("sql_udf", first_letter_function)
+
+# COMMAND ----------
+
+# You can still apply the UDF from Python
+display(sales_df.select(first_letter_udf(col("email"))))
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC -- You can now also apply the UDF from SQL
+# MAGIC SELECT sql_udf(email) AS firstLetter FROM sales
+
+# COMMAND ----------
+
+# MAGIC %md
 # MAGIC
 # MAGIC ### Use Decorator Syntax (Python Only)
 # MAGIC
